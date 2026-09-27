@@ -1,0 +1,212 @@
+.activity {
+  margin: 4px 0 12px;
+}
+.activity-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 14px;
+  text-align: left;
+}
+.activity-head .chev {
+  flex-shrink: 0;
+  transition: transform 0.18s ease-out;
+}
+.activity.open .activity-head .chev {
+  transform: rotate(90deg);
+}
+.activity-summary {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.shimmer {
+  background: linear-gradient(90deg, var(--text-muted) 0%, var(--text) 50%, var(--text-muted) 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 1.6s linear infinite;
+}
+@keyframes shimmer {
+  to {
+    background-position: -200% 0;
+  }
+}
+.tool-row {
+  display: grid;
+  grid-template-columns: 26px minmax(0, 1fr);
+  column-gap: 8px;
+  padding-bottom: 12px;
+}
+.tool-rail {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-top: 3px;
+  color: var(--text-muted);
+}
+.tool-row:not(:last-child) .tool-rail::after {
+  content: '';
+  position: absolute;
+  top: 24px;
+  bottom: -10px;
+  left: 50%;
+  width: 1px;
+  background: var(--border-strong);
+}
+.tool-row.error .tool-rail {
+  color: var(--danger);
+}
+.tool-main {
+  min-width: 0;
+}
+.tool-head {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 0;
+  background: none;
+  border: none;
+  text-align: left;
+}
+.tool-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+.tool-row.error .tool-label {
+  color: var(--danger);
+}
+.tool-failed {
+  font-size: 12px;
+  color: var(--danger);
+}
+.tool-running {
+  font-size: 12px;
+  color: var(--text-faint);
+}
+.diffstat {
+  font: 11.5px var(--mono);
+}
+.tool-detail {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  width: 100%;
+  margin-top: 2px;
+  padding: 0;
+  background: none;
+  border: none;
+  font: 13px / 19px var(--mono);
+  color: rgba(229, 229, 229, 0.85);
+  text-align: left;
+  word-break: break-all;
+}
+.tool-detail.open {
+  display: block;
+  white-space: pre-wrap;
+}
+.tool-tail {
+  font-size: 12px;
+  color: var(--text-faint);
+  margin-top: 2px;
+}
+.tool-expanded {
+  margin-top: 4px;
+}
+.thought-text {
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--text-faint);
+  white-space: pre-wrap;
+  margin-top: 2px;
+}
+.todo {
+  list-style: none;
+  padding: 0;
+  margin: 4px 0;
+  font-size: 13px;
+}
+.todo li.done {
+  color: var(--text-faint);
+  text-decoration: line-through;
+}
+.chip-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 34px;
+  margin: 6px 0 10px;
+  padding: 0 12px 0 6px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.03);
+  font-size: 13px;
+}
+.chip-row-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 7px;
+  display: grid;
+  place-items: center;
+  color: var(--text-muted);
+}
+.chip-row strong {
+  font-weight: 500;
+}
+.chip-row-text {
+  flex: 1;
+  min-width: 0;
+  color: var(--text-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.error-chip {
+  background: rgba(255, 100, 103, 0.05);
+  border-color: rgba(255, 100, 103, 0.16);
+}
+.error-chip .chip-row-icon {
+  background: rgba(255, 100, 103, 0.12);
+  color: var(--danger);
+}
+.fork-divider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-faint);
+  font-size: 12px;
+  margin: 18px 0;
+}
+.fork-divider::before,
+.fork-divider::after {
+  content: '';
+  flex: 1;
+  border-top: 1px dashed var(--border-strong);
+}
+.jump-latest {
+  position: absolute;
+  left: 50%;
+  bottom: 12px;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--border);
+  background: rgba(30, 30, 30, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  color: var(--text);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+  animation: fade-in 0.2s ease-out;
+}

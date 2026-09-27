@@ -1,0 +1,190 @@
+.composer-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.composer-caption {
+  font-size: 12px;
+  color: var(--text-faint);
+  padding: 0 10px;
+}
+.composer-caption.error {
+  color: var(--danger);
+}
+.composer-caption.warn {
+  color: var(--warning);
+}
+.composer-caption.link {
+  align-self: flex-start;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  min-height: 28px;
+}
+.composer {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  transition: border-radius 0.2s ease-out;
+}
+.composer.collapsed {
+  border-radius: 24px;
+  padding: 5px 5px 5px 18px;
+}
+.composer.expanded {
+  border-radius: 20px;
+  padding: 12px;
+}
+.composer-editor-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.composer textarea {
+  flex: 1;
+  min-width: 0;
+  min-height: 24px;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: none;
+  resize: none;
+  font-size: var(--fs-body);
+  line-height: 24px;
+  color: var(--text);
+}
+.composer.expanded textarea {
+  min-height: 64px;
+  padding: 2px 4px;
+}
+.composer textarea::placeholder {
+  color: rgba(229, 229, 229, 0.3);
+}
+@media (max-width: 899px) {
+  .composer textarea {
+    font-size: 17px;
+  }
+}
+.composer-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+.chip-scroller {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-mask-image: linear-gradient(to right, black calc(100% - 24px), transparent);
+  mask-image: linear-gradient(to right, black calc(100% - 24px), transparent);
+  padding-right: 24px;
+}
+.chip-scroller::-webkit-scrollbar {
+  display: none;
+}
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 40px;
+  padding: 0 14px;
+  border: none;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.chip svg {
+  flex-shrink: 0;
+}
+.chip:hover:not(.readonly) {
+  background: rgba(255, 255, 255, 0.12);
+}
+.chip.readonly {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 12px;
+}
+.chip-label {
+  max-width: 190px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.attach-circle {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-muted);
+  display: grid;
+  place-items: center;
+}
+.action-circle {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: none;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-faint);
+}
+.action-circle.active,
+.action-circle.stop {
+  background: #fff;
+  color: var(--bg);
+}
+.stop-square {
+  width: 12px;
+  height: 12px;
+  border-radius: 3.5px;
+  background: var(--bg);
+}
+.staged-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.staged-image {
+  position: relative;
+}
+.staged-thumb {
+  width: 56px;
+  height: 56px;
+  padding: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--surface-raised);
+}
+.staged-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.staged-remove {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid var(--border-strong);
+  background: #2a2a2a;
+  color: var(--text);
+  display: grid;
+  place-items: center;
+  padding: 0;
+}

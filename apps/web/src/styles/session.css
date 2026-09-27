@@ -1,0 +1,147 @@
+.session-loading {
+  flex: 1;
+  display: grid;
+  place-items: center;
+}
+.transcript-wrap {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+}
+.transcript {
+  height: 100%;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+.transcript-inner {
+  max-width: 736px;
+  margin: 0 auto;
+  padding: 26px 20px 16px;
+}
+.msg {
+  margin-top: 16px;
+}
+.msg:first-child {
+  margin-top: 0;
+}
+.msg.user {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+.msg.unsent {
+  opacity: 0.65;
+}
+.bubble {
+  max-width: 80%;
+  padding: 10px 16px;
+  border-radius: 22px;
+  background: var(--surface-raised);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  white-space: pre-wrap;
+  word-break: break-word;
+  user-select: text;
+}
+.bubble .clamped {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.show-more {
+  display: block;
+  min-height: 44px;
+  margin-bottom: -10px;
+  padding: 0;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+.show-more.small {
+  min-height: 32px;
+  margin: 0;
+  font-size: 12px;
+}
+.msg-meta {
+  font-size: 12px;
+  color: var(--text-faint);
+  margin-top: 6px;
+}
+.bubble-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+}
+.remote-image {
+  display: grid;
+  place-items: center;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  background: var(--surface-raised);
+  color: var(--text-faint);
+}
+.remote-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.bubble-thumb {
+  width: 112px;
+  height: 80px;
+  border-radius: 8px;
+}
+.generated-image {
+  max-width: min(512px, 100%);
+  min-height: 120px;
+  border-radius: 12px;
+  margin: 8px 0;
+}
+.generated-image img {
+  object-fit: contain;
+  max-height: 420px;
+}
+.appshot-strip {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  max-width: 100%;
+}
+.appshot-card {
+  width: 220px;
+  flex-shrink: 0;
+  margin: 0;
+}
+.appshot-image {
+  width: 220px;
+  height: 140px;
+  border-radius: 8px;
+  -webkit-mask-image: linear-gradient(black 70%, transparent);
+  mask-image: linear-gradient(black 70%, transparent);
+}
+.appshot-card figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-top: 6px;
+}
+.appshot-app {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+.appshot-title {
+  font-size: 12.5px;
+  font-weight: 500;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

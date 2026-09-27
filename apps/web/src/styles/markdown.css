@@ -1,0 +1,166 @@
+.md {
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  word-break: break-word;
+  user-select: text;
+}
+.md > :first-child {
+  margin-top: 0;
+}
+.md > :last-child {
+  margin-bottom: 0;
+}
+.md p,
+.md ul,
+.md ol,
+.md blockquote,
+.md table {
+  margin: 0 0 12px;
+}
+.md ul,
+.md ol {
+  padding-left: 24px;
+}
+.md li {
+  margin: 4px 0;
+}
+.md h1,
+.md h2,
+.md h3,
+.md h4 {
+  font-weight: 600;
+  margin: 18px 0 8px;
+}
+.md h1 {
+  font-size: 1.35em;
+  line-height: 1.35;
+}
+.md h2 {
+  font-size: 1.18em;
+  line-height: 1.4;
+}
+.md h3,
+.md h4 {
+  font-size: 1.06em;
+}
+.md a {
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-color: var(--text-faint);
+  text-underline-offset: 3px;
+}
+.md :not(pre) > code {
+  font-size: 0.9em;
+  color: var(--inline-code);
+  background: var(--inline-wash);
+  padding: 1px 5px;
+  border-radius: 4.5px;
+}
+.md blockquote {
+  padding: 6px 12px;
+  border-left: 2px solid rgba(124, 134, 255, 0.6);
+  background: rgba(124, 134, 255, 0.05);
+  color: var(--text-muted);
+}
+.md table {
+  display: block;
+  overflow-x: auto;
+  border-collapse: collapse;
+  font-size: 0.88em;
+}
+.md th,
+.md td {
+  border: 1px solid var(--border);
+  padding: 6px 10px;
+  text-align: left;
+}
+.md hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 16px 0;
+}
+.md img {
+  max-width: 100%;
+}
+.code-block {
+  margin: 0 0 12px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.035);
+  overflow: hidden;
+}
+.code-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 30px;
+  padding: 0 6px 0 12px;
+  background: rgba(255, 255, 255, 0.02);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 11px;
+  color: var(--text-muted);
+}
+.code-copy {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 11px;
+  padding: 6px 8px;
+  border-radius: 6px;
+}
+.code-copy:hover {
+  background: var(--hover);
+  color: var(--text);
+}
+pre.code {
+  margin: 0;
+  padding: 10px 12px;
+  overflow-x: auto;
+  font-size: 14px;
+  line-height: 21px;
+}
+@media (min-width: 900px) {
+  pre.code {
+    font-size: 13px;
+    line-height: 20px;
+  }
+}
+pre.code.small {
+  font-size: 12.5px;
+  line-height: 19px;
+  max-height: 360px;
+  overflow: auto;
+  background: rgba(255, 255, 255, 0.035);
+  border-radius: 10px;
+  margin: 6px 0;
+  white-space: pre;
+}
+pre.diff .add,
+.diffstat .add {
+  color: var(--token-string);
+}
+pre.diff .del,
+.diffstat .del {
+  color: var(--danger);
+}
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-built_in,
+.hljs-meta .hljs-keyword {
+  color: var(--token-keyword);
+}
+.hljs-string,
+.hljs-regexp,
+.hljs-addition {
+  color: var(--token-string);
+}
+.hljs-number,
+.hljs-literal {
+  color: var(--token-number);
+}
+.hljs-comment,
+.hljs-quote {
+  color: var(--text-faint);
+}
+.hljs-deletion {
+  color: var(--danger);
+}

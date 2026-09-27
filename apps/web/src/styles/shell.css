@@ -1,0 +1,43 @@
+.app {
+  display: flex;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+  background: var(--surface);
+}
+.pane-list {
+  width: 380px;
+  flex-shrink: 0;
+  border-right: 1px solid var(--border);
+  display: flex;
+  min-height: 0;
+}
+.pane-main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+}
+.app.narrow .pane-main {
+  background: var(--surface);
+}
+.pane-placeholder {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  color: var(--text-faint);
+  font-size: 14px;
+  padding: 24px;
+  text-align: center;
+}
+.screen {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  background: var(--bg);
+}

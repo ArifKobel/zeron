@@ -1,0 +1,23 @@
+.harness-mark,
+.zeron-mark {
+  display: inline-block;
+  flex-shrink: 0;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+.harness-mark {
+  background: var(--text-faint);
+}
+.harness-mark.claude {
+  background: var(--claude);
+}
+.harness-mark.dim {
+  opacity: 0.6;
+}
+.zeron-mark {
+  background: var(--text);
+}

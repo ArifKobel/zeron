@@ -1,0 +1,101 @@
+.device-tabs {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+.device-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 36px;
+  padding: 0 14px;
+  border-radius: 999px;
+  border: none;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.device-tab.selected {
+  background: rgba(255, 255, 255, 0.15);
+}
+.device-tab i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+}
+.device-tab i.online {
+  background: rgba(0, 212, 146, 0.9);
+}
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 0 12px;
+}
+.breadcrumb-path {
+  flex: 1;
+  min-width: 0;
+  font: 12px var(--mono);
+  color: var(--text-muted);
+  direction: rtl;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.sheet-card {
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  overflow: hidden;
+}
+.sheet-card-empty {
+  padding: 18px;
+  font-size: 13px;
+  color: var(--text-faint);
+}
+.folder-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 48px;
+  padding: 0 16px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--text);
+  text-align: left;
+}
+.folder-row:last-child {
+  border-bottom: none;
+}
+.folder-row:hover {
+  background: var(--hover);
+}
+.folder-name {
+  flex: 1;
+  min-width: 0;
+  font-size: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.repo-icon {
+  color: rgba(124, 134, 255, 0.85);
+}
+.folder-icon,
+.folder-chevron {
+  color: var(--text-muted);
+}
+.git-capsule {
+  font: 10px var(--mono);
+  color: var(--accent);
+  background: rgba(124, 134, 255, 0.12);
+  padding: 2px 7px;
+  border-radius: 999px;
+}
